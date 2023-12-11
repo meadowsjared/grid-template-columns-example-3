@@ -1,0 +1,32 @@
+/* named grid lines */
+.wrapper {
+  display: grid;
+  grid-template-columns: [left-start main-start] 1fr [center-start left-end] 1fr [center-end right-start] 1fr [right-end main-end];
+  grid-template-rows: [top-start main-start] 100px [top-end center-start] 100px [center-end bottom-start] 100px [bottom-end main-end];
+  background: lightcoral;
+}
+
+.thing {
+  grid-template-columns: inherit;
+  /* grid-column: content; */ /* for just column */
+  /* grid-row: content; */
+  grid-area: center / center;
+  background: yellowgreen;
+}
+
+.second-thing {
+  grid-template-columns: inherit;
+  grid-area: bottom / left;
+  background: #fff7;
+}
+
+.third-thing {
+  grid-template-columns: inherit; /* doesn't work */
+  grid-area: bottom / right; /* doesn't work */
+  background: green;
+}
+
+code {
+  text-wrap: nowrap;
+  font-weight: bolder;
+}
